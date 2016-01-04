@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.HomeActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RadioGroup
+        android:id="@+id/rg_home_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFAAC8">
+        <RadioButton
+            style="@style/HomeBottomText"
+            android:id="@+id/tv_home_default"
+            android:drawableTop="@mipmap/ic_menu_home"
+            android:checked="true"
+            android:text="@string/home_page"/>
+        <RadioButton
+            style="@style/HomeBottomText"
+            android:id="@+id/tv_home_square"
+            android:drawableTop="@mipmap/ic_menu_square"
+            android:text="@string/home_square"/>
+        <RadioButton
+            style="@style/HomeBottomText"
+            android:id="@+id/tv_home_empty"
+            android:text=""/>
+        <RadioButton
+            style="@style/HomeBottomText"
+            android:drawableTop="@mipmap/ic_menu_discover"
+            android:id="@+id/tv_home_discover"
+            android:text="@string/home_discover"/>
+        <RadioButton
+            style="@style/HomeBottomText"
+            android:id="@+id/tv_home_me"
+            android:drawableTop="@mipmap/ic_menu_me"
+            android:text="@string/home_me"/>
+    </RadioGroup>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_email" />
+
+    <LinearLayout
+        android:id="@+id/ll_home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_home_buttom"
+        android:orientation="vertical">
+    </LinearLayout>
+
+</RelativeLayout>
